@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <title>Fakestore - E-Commerce</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Fakestore</h1>
+            <input type="text" id="search"
+            placeholder="Search products...">
+        </header>
+
+        <header class="hero">
+            <h1>Welcome to Fakestore</h1>
+            <p>Your one stop shop for amazing products</p>        
+        </header>
+
+        <section id = "featured">
+            <h2>Featured Products</h2>
+            <div id="featuredProducts"
+            class="product-grid"></div>
+        </section>
+
+        <button id="darkModeToggle" onclick="toggleDarkMode()">Dark Mode</button>
+        <div id="loader" class="loader"></div>
+      
+        
+        <section id="productDetail">
+            <div id="productDetailContent"></div>
+        </section>
+    
+        <section id="cartPage">
+            <h2>Shopping Cart</h2>
+            <div id="cartItems"></div>
+            <p>Total: $<span id="cartTotal">0.00</span></p>
+        </section>
+
+        <main>
+            <aside id="filters">
+            <h2>Filter by</h2>
+            <div id="categoryFilters"></div>
+            <input type = "range" id = "priceFilter"
+            min="0" max="500" step="10"
+            oninput="filterByPrice(event)">
+            </aside>
+            
+            <div class="product-grid"
+            id="productGrid"></div>
+
+            <div id="paginationControls">
+                <button onclick="previousPage()">Previous</button>
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </main>
+
+            <footer>
+                <p>&copy; 2024 FakeStore | Powered by FakeStore API</p>
+            </footer>
+            
+            <script src="scripts/app.js"></script>
+    </body>
+</html>
